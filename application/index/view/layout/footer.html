@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  本文件引用时必须放到 页面的  <div class="page" id="page"> 中否则不显示
+ -->
+
+<body>
+  <div class="footer white_txt bordered_wht_border image_bck" data-color="#0e0e0e" id="footer-sec"
+    style="background-color: rgb(14, 14, 14);">
+
+    <div class="foot-top">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-3 col-sm-6 foot-contact">
+
+            <div class="widget">
+              <h4 class="dark-title"><a href="index13.html">联系我们</a></h4>
+
+              <div class="f-contact"><span class="contacts_ti fa fa-map-marker"></span>地址：山东省青岛市市南区南京路100号<br>
+
+                <span class="contacts_ti fa fa-phone"></span>电话：13964794166 0536-4666898<br>
+
+                <span class="contacts_ti fa fa-print"></span>传真：0536-4666898<br>
+
+                <span class="contacts_ti fa fa-envelope"></span><a
+                  href="mailto:oujinbeer@163.com">邮箱：oujinbeer@163.com</a><br>
+
+                <span class="contacts_ti fa fa-globe"></span>网址：www.oujinbeer.com www.oujinpijiu.com
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-3 col-sm-6 foot-nav">
+
+            <div class="widget">
+
+              <h4>快速链接</h4>
+
+              <ul class="list-unstyled f-nav">
+
+                <li><a href="index.html"><i class="fa fa-caret-right"></i> &nbsp;网站首页</a></li>
+
+
+                {foreach name="nav" item="vo"}
+                <li class="Lev1"><a class="menu1 parents" id="{$vo.route}" href="{$vo.route}?cid={$vo.id}"
+                    class="menu1">{$vo.name}</a>
+
+                </li>
+                {/foreach}
+
+
+              </ul>
+
+            </div>
+
+          </div>
+
+          <div hidden class="col-md-3 col-sm-6 hidden-xs-x foot-news">
+
+            <div class="widget">
+              <h4 class="dark-title"><a href="index8.html">新闻资讯</a></h4>
+
+              <ul class="list-unstyled f-news">
+
+                <li>
+
+                  <h5><a href="2019-12-25-222.html">啤酒生产厂家浅谈啤酒泡沫的作用</a></h5>
+
+                  <span class="date"><i class="fa fa-calendar"></i> &nbsp;2019-12-25</span>
+                </li>
+
+                <li>
+
+                  <h5><a href="2019-12-25-223.html">啤酒生产厂家分享正确的倒酒方法</a></h5>
+
+                  <span class="date"><i class="fa fa-calendar"></i> &nbsp;2019-12-25</span>
+                </li>
+
+                <li>
+
+                  <h5><a href="2019-12-19-221.html">浅析精酿啤酒与商业啤酒的区别</a></h5>
+
+                  <span class="date"><i class="fa fa-calendar"></i> &nbsp;2019-12-19</span>
+                </li>
+
+
+              </ul>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-3 col-sm-6 foot-qrcode">
+
+            <div class="widget">
+
+              <h4>扫描二维码</h4>
+
+              <div class="f-qrcode"><img src="__CDN__/assets/picture/qrcode.png" width="200"></div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <!--    <div id="flink"> 友情链接：</div>-->
+    </div>
+
+    <div class="footer_end">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-9 col-sm-12 col-xs-12 cr-left"> <span class="sub">Copyright &copy; 2002-2021
+              啤酒代理加盟|精酿啤酒|生产厂家|夜场啤酒|啤酒招商|青岛欧劲啤酒有限公司 版权所有
+
+              <a href="https://beian.miit.gov.cn" target='_blank'>{$site.beian}</a> <a href="javascript:;"
+                target='_blank'>Power by OuJinBeer</a></span></div>
+
+          <div class="col-md-3 col-sm-12 col-xs-12 text-right cr-right">
+
+            <ul class="list-inline social-list">
+
+              <li><a href="javascript:;" target="_blank"><i class="fa fa-weibo"></i></a></li>
+
+              <li><a href="javascript:;" target="_blank"><i class="fa fa-tencent-weibo"></i></a></li>
+
+              <li><a href="javascript:;" target="_blank"><i class="fa fa-qq"></i></a></li>
+
+              <li><a href="javascript:;" target="_blank"><i class="fa fa-shopping-cart"></i></a></li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

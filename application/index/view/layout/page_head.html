@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <title>{$site.name}</title>-->
+
+  <link href="__CDN__/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <link href="__CDN__/assets/css/themify-icons.css" rel="stylesheet" type="text/css">
+
+  <link href="__CDN__/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+  <link href="__CDN__/assets/css/owl.carousel.css" rel="stylesheet" type="text/css">
+
+  <link href="__CDN__/assets/css/magnific-popup.css" rel="stylesheet" type="text/css">
+
+  <link href="__CDN__/assets/css/animate.css" rel="stylesheet" type="text/css">
+
+  <link href="__CDN__/assets/css/style.css" rel="stylesheet" type="text/css">
+
+  <link href="__CDN__/assets/css/tk.css" rel="stylesheet" type="text/css">
+
+  <script src="__CDN__/assets/js1/jquery-1.11.3.min.js"></script>
+
+  <script src="__CDN__/assets/js1/bootstrap.min.js"></script>
+  <!--[if IE 9]>
+
+  <link rel="stylesheet" href="/skin/css/ie9.css" type="text/css" media="screen"/>
+
+  <![endif]-->
+
+
+<header class="white_bck-x simple_menu header">
+  <div class="logo pull-left">
+    <a href="/"><img src="__CDN__/assets/picture/logo.png" alt="{$site.name}"></a>
+  </div>
+  <div class="header_btns_wrapper" id="navigation">
+    <div class="main_menu"><i class="ti-menu"></i><i class="ti-close"></i></div>
+    <div class="sub_menu mobile-menu">
+      <div class="sub_cont">
+        <ul>
+          <!--                        一级-->
+            <li class="Lev1"><a href="/" class="menu1">网站首页</a></li>
+            <!--                        一级-->
+            {foreach name="nav" item="vo"}
+            <li class="Lev1">
+              <a class="menu1 parents" id="{$vo.route}" href="{$vo.route}?cid={$vo.id}" class="menu1">{$vo.name}</a>
+              <!--                        二级-->
+              {if $vo["children"] !=null}
+              <ul class="mega_menu sub-menu2">
+                <li class="mega_sub">
+                  <ul class="dr-menu2">
+                    {foreach name="vo['children']" item="chi"}
+                    <!-- 这里需要按照不同的子页面类型跳转不同路由-->
+                    <li class="Lev2">
+                      <a href="{$chi.route}?cid={$chi.id}" class="menu2">{$chi.name}</a>
+                    </li>
+                    {/foreach}
+                  </ul>
+                </li>
+              </ul>
+              {/if}
+            </li>
+            {/foreach}
+            <li class="no_arrow right_sub sub_min_width right-menu-1">
+              <a href="#" class="parents"><i class="fa fa-star"></i></a>
+              <div class="mega_menu top-info-1">
+                <h3 class="adword">【啤酒代理加盟】【精酿啤酒】【生产厂家】【夜场啤酒】【啤酒招商】【青岛欧劲啤酒有限公司】</h3>
+                <p class="tel">全国服务热线：<b>13964794166 0536-4666898</b></p>
+                <div class="top-social"><a href="javascript:;" target="_blank"><i
+                        class="fa fa-weibo"></i> &nbsp;官方微博</a> <a href="javascript:;"
+                                                                   target="_blank"><i
+                        class="fa fa-tencent-weibo"></i> &nbsp;腾讯微博</a> <a href="javascript:;"
+                                                                           target="_blank"><i
+                        class="fa fa-qq"></i> &nbsp;在线咨询</a></div>
+              </div>
+            </li>
+            <li class="no_arrow right_sub sub_min_width right-menu-2">
+              <a href="javascript:;" class="parents" target="_blank">
+                <i class="ti-shopping-cart"></i>
+              </a>
+            </li>
+            <!--<li class="right_sub right-menu-lang"> <a href="#" class="parents">语言</a>
+                <ul class="mega_menu">
+                  <li class="mega_sub">
+                    <ul>
+                      <li><a href="">中文版</a></li>
+                      <li><a href="">English</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>-->
+            <li class="right_sub no_arrow sub_min_width right-menu-search">
+              <a href="#" class="parents">
+                <i class="ti-search"></i>
+              </a>
+              <ul class="mega_menu">
+                <li class="mega_sub bask_menu">
+                  <form class="t-search-form" name="formsearch" action="/plus/search.php">
+                    <input type="hidden" name="kwtype" value="0">
+                    <input type="text" value="" name="q" class="keyword form-control" placeholder="输入关键字">
+                    <button type="submit" class="se_btn"><i class="ti-search"></i></button>
+                  </form>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="#page" class="up_block go">
+      <i class="fa fa-angle-up"></i>
+    </a>
+</header>
+
+
+</head>
+<style type="text/css">
+  #flink{
+    text-align:center;  ;
+  }
+</style>
+<body>
+
+</body>
+<script>
+  $(".sub_menu li").mouseenter(function(){
+    $(this).children(".mega_menu").stop().slideToggle();
+  });
+  $(".sub_menu li").mouseleave(function(){
+    $(this).children(".mega_menu").stop().slideToggle();
+  });
+</script>
+</html>
